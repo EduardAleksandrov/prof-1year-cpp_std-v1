@@ -25,18 +25,18 @@ int main()
     // future with the help of function
     std::string str1 {"one"};
     std::string str2 {"two"};
-    std::future<std::string> ff = std::async(std::launch::async, samplefunction, std::ref(str2), std::ref(str1));
+    std::future<std::string> f1 = std::async(std::launch::async, samplefunction, std::ref(str2), std::ref(str1));
     
     // future with the help of function object
     SamplefunctionObject samplefunctionObject;
-    auto ffo= std::async(std::launch::async, samplefunctionObject,"sample function object");
+    auto f2= std::async(std::launch::async, samplefunctionObject,"sample function object");
     // future with the help of lambda function
-    auto fl= std::async(std::launch::async, []( const std::string& st ){ return "This is the output of " + st ;}, 
+    auto f3= std::async(std::launch::async, []( const std::string& st ){ return "This is the output of " + st ;}, 
                         " lambda function" );
-    ff.wait();
+    f1.wait();
     std::cout << str1 << "\n";
-    ffo.wait();
-    fl.wait();
-    std::cout << ff.get() << "\n" << ffo.get() << "\n" << fl.get() << std::endl;
+    f2.wait();
+    f3.wait();
+    std::cout << f1.get() << "\n" << f2.get() << "\n" << f3.get() << std::endl;
     std::cout << std::endl;
 }
