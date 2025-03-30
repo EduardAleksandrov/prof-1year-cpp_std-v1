@@ -1,3 +1,11 @@
+/*
+    std::promise
+    std::future
+    std::async
+    std::bind
+    std::ref
+*/
+
 // c++ program that demonstrates async
 // library for std::cout
 #include <iostream>
