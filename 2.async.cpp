@@ -25,7 +25,7 @@ int main()
     // future with the help of function
     std::string str1 {"one"};
     std::string str2 {"two"};
-    auto ff = std::async(std::launch::async, samplefunction, std::ref(str2), std::ref(str1));
+    std::future<std::string> ff = std::async(std::launch::async, samplefunction, std::ref(str2), std::ref(str1));
     
     // future with the help of function object
     SamplefunctionObject samplefunctionObject;
@@ -37,8 +37,6 @@ int main()
     std::cout << str1 << "\n";
     ffo.wait();
     fl.wait();
-    std::cout << ff.get() << "\n"
-    << ffo.get() << "\n"
-    << fl.get() << std::endl;
+    std::cout << ff.get() << "\n" << ffo.get() << "\n" << fl.get() << std::endl;
     std::cout << std::endl;
 }
