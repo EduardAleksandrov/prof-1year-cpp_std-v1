@@ -12,3 +12,6 @@ run_4:
 
 run_5:
 	g++ -std=c++23 ./5.async.cpp -o ./build/5.async && ./build/5.async
+
+run_6:
+	g++ -std=c++23 ./6.async.cpp -o ./build/6.async && ./build/6.async
