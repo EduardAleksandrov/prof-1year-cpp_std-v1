@@ -21,3 +21,6 @@ run_7:
 
 run_8:
 	g++ -std=c++23 ./8.pthread.cpp -o ./build/8.pthread -lpthread && ./build/8.pthread
+
+run_9:
+	g++ -std=c++23 ./9.readers.cpp -o ./build/9.readers && ./build/9.readers
