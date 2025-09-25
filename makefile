@@ -15,3 +15,9 @@ run_5:
 
 run_6:
 	g++ -std=c++23 ./6.async.cpp -o ./build/6.async && ./build/6.async
+
+run_7:
+	g++ -std=c++23 ./7.thread.cpp -o ./build/7.thread && ./build/7.thread
+
+run_8:
+	g++ -std=c++23 ./8.pthread.cpp -o ./build/8.pthread -lpthread && ./build/8.pthread
